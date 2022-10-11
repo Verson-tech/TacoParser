@@ -3,6 +3,7 @@ namespace LoggingKata
 {
     public interface ILog
     {
+        //methods:
         void LogFatal(string log, Exception exception = null);
         void LogError(string log, Exception exception = null);
         void LogWarning(string log);

@@ -4,6 +4,7 @@ namespace LoggingKata
 {
     public class TacoLogger : ILog
     {
+        //methods:
         public void LogFatal(string log, Exception exception = null)
         {
             Console.WriteLine($"Fatal: {log}, Exception {exception}");

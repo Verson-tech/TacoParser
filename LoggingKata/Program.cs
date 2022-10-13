@@ -33,9 +33,9 @@ namespace LoggingKata
                 {
                     logger.LogWarning("Minimum lines entered.");
                 }
+            }
 
-
-                logger.LogInfo($"Lines: {lines[0]}");
+            logger.LogInfo($"Lines: {lines[0]}");
 
                 // Create a new instance of your TacoParser class
                 var parser = new TacoParser();
@@ -89,16 +89,21 @@ namespace LoggingKata
                 }
                 // Once you've looped through everything, you've found the two Taco Bells farthest away from each other.
                 Console.WriteLine();
-                Console.WriteLine("The two TacoBells farthest from are:");
-                //for (int n = 0; n < 2; n++)
-                //{
-                //    Thread.Sleep(500);
-                //    Console.WriteLine(" .");
-                //}
-                Console.WriteLine(distance);
-                Console.WriteLine($"{trackable1.Name} and {trackable2.Name}");
-                Console.WriteLine($"Distance: {Math.Round(distance / 1.609)} miles.");
+                Console.WriteLine($"The two TacoBells farthest from each other are: \n{trackable1.Name} and {trackable2.Name}");
+                var dot = "        . . .";
+                for (int n = 0; n < 2; n++)
+                {
+                    Thread.Sleep(500);
+                    Console.WriteLine(dot);
+                }
+                Console.WriteLine($"Distance in kilometers : {Math.Round(distance, 2)}");
+            for (int n = 0; n < 2; n++)
+            {
+                Thread.Sleep(500);
+                Console.WriteLine(dot);
             }
+            Console.WriteLine($"Distance in miles: {(Math.Round(distance / 1.609))} miles.");
+            
         }
     }
 }
